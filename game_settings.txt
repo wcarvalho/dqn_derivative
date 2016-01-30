@@ -1,0 +1,405 @@
+Creating Agent Network from convnet_atari3
+
+game_env: 
+	game_path : /Users/wilkacarvalho/projects/human_level_control_old/roms/
+	verbose : 0
+	game : 
+		useRGB : true
+		env : 
+			envSpec : 
+				obsShapes : 
+					1 : 
+						1 : 210
+						2 : 160
+				nActions : 18
+			config : 
+				gameOverReward : 0
+				enableRamObs : false
+				display : false
+			ale : cdata<struct ALEInterface *>: 0x7fe2596eeff0
+		action : 
+			1 : userdata
+		name : breakout
+		observations : 
+			1 : userdata
+		game_over : function: 0x0d467fa0
+	_state : 
+		observation : userdata
+		terminal : false
+		reward : 0
+		lives : 0
+		prev_lives : 0
+	_actrep : 4
+	_screen : 
+		gpu : -1
+		poolBuffer : userdata
+		poolType : max
+		frameBuffer : userdata
+		lastIndex : 1
+		poolFun : function: 0x0cf75728
+		full : false
+		bufferSize : 2
+	_actions : 
+		1 : 0
+		2 : 1
+		3 : 3
+		4 : 4
+	_random_starts : 30
+
+game_actions: 
+	1 : 0
+	2 : 1
+	3 : 3
+	4 : 4
+
+agent: 
+	lr_endt : 1000000
+	replay_memory : 1000000
+	bufferSize : 512
+	hist_len : 4
+	lr_start : 0.00025
+	histType : linear
+	bestq : 0
+	histSpacing : 1
+	deltas : userdata
+	input_dims : 
+		1 : 4
+		2 : 84
+		3 : 84
+	n_hid : 
+		1 : 512
+	ep_start : 1
+	q_max : 1
+	g : userdata
+	target_network : 
+		gradInput : userdata
+		modules : 
+			1 : 
+				batchsize : userdata
+				size : userdata
+				output : userdata
+				gradInput : userdata
+				nelement : 28224
+				_gradOutput : userdata
+				_input : userdata
+			2 : 
+				dH : 4
+				dW : 4
+				nOutputPlane : 32
+				output : userdata
+				gradInput : userdata
+				kW : 8
+				finput : userdata
+				kH : 8
+				nInputPlane : 4
+				weight : userdata
+				padW : 1
+				gradWeight : userdata
+				bias : userdata
+				padH : 1
+				gradBias : userdata
+				fgradInput : userdata
+			3 : 
+				gradInput : userdata
+				output : userdata
+			4 : 
+				dH : 2
+				dW : 2
+				nOutputPlane : 64
+				output : userdata
+				gradInput : userdata
+				kW : 4
+				finput : userdata
+				kH : 4
+				nInputPlane : 32
+				weight : userdata
+				padW : 0
+				gradWeight : userdata
+				bias : userdata
+				padH : 0
+				gradBias : userdata
+				fgradInput : userdata
+			5 : 
+				gradInput : userdata
+				output : userdata
+			6 : 
+				dH : 1
+				dW : 1
+				nOutputPlane : 64
+				output : userdata
+				gradInput : userdata
+				kW : 3
+				finput : userdata
+				kH : 3
+				nInputPlane : 64
+				weight : userdata
+				padW : 0
+				gradWeight : userdata
+				bias : userdata
+				padH : 0
+				gradBias : userdata
+				fgradInput : userdata
+			7 : 
+				gradInput : userdata
+				output : userdata
+			8 : 
+				batchsize : userdata
+				size : userdata
+				output : userdata
+				gradInput : userdata
+				nelement : 3136
+				_gradOutput : userdata
+				_input : userdata
+			9 : 
+				gradBias : userdata
+				weight : userdata
+				bias : userdata
+				gradInput : userdata
+				output : userdata
+				gradWeight : userdata
+			10 : 
+				gradInput : userdata
+				output : userdata
+			11 : 
+				gradBias : userdata
+				weight : userdata
+				bias : userdata
+				gradInput : userdata
+				output : userdata
+				gradWeight : userdata
+		output : userdata
+	ep_end : 0.1
+	g2 : userdata
+	w : userdata
+	update_freq : 4
+	minibatch_size : 32
+	ncols : 1
+	r_max : 1
+	transition_params : 
+	lr_end : 0.00025
+	target_q : 10000
+	numSteps : 0
+	v_avg : 0
+	n_units : 
+		1 : 32
+		2 : 64
+		3 : 64
+	ep_endt : 1000000
+	min_reward : -1
+	discount : 0.99
+	learn_start : 50000
+	filter_stride : 
+		1 : 4
+		2 : 2
+		3 : 1
+	ep : 1
+	tderr_avg : 0
+	transitions : 
+		stateDim : 7056
+		histLen : 4
+		recentMemSize : 4
+		nonEventProb : 1
+		maxSize : 1000000
+		bufferSize : 512
+		a : userdata
+		histType : linear
+		insertIndex : 0
+		histSpacing : 1
+		buf_s : userdata
+		buf_s2 : userdata
+		gpu : -1
+		numActions : 4
+		nonTermProb : 1
+		s : userdata
+		action_encodings : userdata
+		buf_term : userdata
+		buf_r : userdata
+		t : userdata
+		buf_a : userdata
+		recent_t : 
+		recent_a : 
+		recent_s : 
+		r : userdata
+		zeroFrames : 1
+		numEntries : 0
+		histIndices : 
+			1 : 1
+			2 : 2
+			3 : 3
+			4 : 4
+	max_reward : 1
+	wc : 0
+	tensor_type : 
+	nl : 
+	actions : 
+		1 : 0
+		2 : 1
+		3 : 3
+		4 : 4
+	n_replay : 1
+	nonTermProb : 1
+	tmp : userdata
+	network : 
+		gradInput : userdata
+		modules : 
+			1 : 
+				nelement : 28224
+				_input : userdata
+				output : userdata
+				gradInput : userdata
+				size : userdata
+				_gradOutput : userdata
+				batchsize : userdata
+			2 : 
+				dH : 4
+				dW : 4
+				nOutputPlane : 32
+				output : userdata
+				gradInput : userdata
+				fgradInput : userdata
+				finput : userdata
+				gradBias : userdata
+				padH : 1
+				weight : userdata
+				bias : userdata
+				gradWeight : userdata
+				padW : 1
+				nInputPlane : 4
+				kW : 8
+				kH : 8
+			3 : 
+				gradInput : userdata
+				output : userdata
+			4 : 
+				dH : 2
+				dW : 2
+				nOutputPlane : 64
+				output : userdata
+				gradInput : userdata
+				fgradInput : userdata
+				finput : userdata
+				gradBias : userdata
+				padH : 0
+				weight : userdata
+				bias : userdata
+				gradWeight : userdata
+				padW : 0
+				nInputPlane : 32
+				kW : 4
+				kH : 4
+			5 : 
+				gradInput : userdata
+				output : userdata
+			6 : 
+				dH : 1
+				dW : 1
+				nOutputPlane : 64
+				output : userdata
+				gradInput : userdata
+				fgradInput : userdata
+				finput : userdata
+				gradBias : userdata
+				padH : 0
+				weight : userdata
+				bias : userdata
+				gradWeight : userdata
+				padW : 0
+				nInputPlane : 64
+				kW : 3
+				kH : 3
+			7 : 
+				gradInput : userdata
+				output : userdata
+			8 : 
+				nelement : 3136
+				_input : userdata
+				output : userdata
+				gradInput : userdata
+				size : userdata
+				_gradOutput : userdata
+				batchsize : userdata
+			9 : 
+				gradBias : userdata
+				weight : userdata
+				bias : userdata
+				gradInput : userdata
+				gradWeight : userdata
+				output : userdata
+			10 : 
+				gradInput : userdata
+				output : userdata
+			11 : 
+				gradBias : userdata
+				weight : userdata
+				bias : userdata
+				gradInput : userdata
+				gradWeight : userdata
+				output : userdata
+		output : userdata
+	gpu : -1
+	filter_size : 
+		1 : 8
+		2 : 4
+		3 : 3
+	lr : 0.00025
+	preproc : 
+		height : 84
+		width : 84
+	valid_size : 500
+	clip_delta : 1
+	verbose : 0
+	rescale_r : 1
+	n_actions : 4
+	state_dim : 7056
+	dw : userdata
+
+opt: 
+	eval_steps : 125000
+	seed : 1
+	name : DQN3_0_1_breakout_FULL_Y
+	verbose : 0
+	network : 
+	pool_frms : 
+		type : max
+		size : 2
+	saveNetworkParams : false
+	gpu : -1
+	eval_freq : 250000
+	tensorType : torch.FloatTensor
+	env_params : 
+		useRGB : true
+	steps : 50000000
+	prog_freq : 5000
+	agent_params : 
+		target_q : 10000
+		ncols : 1
+		replay_memory : 1000000
+		min_reward : -1
+		discount : 0.99
+		bufferSize : 512
+		hist_len : 4
+		ep : 1
+		network : convnet_atari3
+		max_reward : 1
+		gpu : -1
+		n_replay : 1
+		verbose : 0
+		ep_end : 0.1
+		lr : 0.00025
+		preproc : net_downsample_2x_full_y
+		valid_size : 500
+		update_freq : 4
+		minibatch_size : 32
+		rescale_r : 1
+		clip_delta : 1
+		state_dim : 7056
+		learn_start : 50000
+	save_versions : 0
+	framework : alewrap
+	agent : NeuralQLearner
+	threads : 4
+	actrep : 4
+	random_starts : 30
+	game_path : /Users/wilkacarvalho/projects/human_level_control_old/roms/
+	save_freq : 125000
+	env : breakout
